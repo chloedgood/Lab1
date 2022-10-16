@@ -1,0 +1,49 @@
+
+package deliverable_one;
+
+import java.util.Scanner;
+
+public class JavaDelivOne {
+
+public static void main(String[] args) {
+	final int NUM_UPPER_LETTERS = 1;
+	final int NUM_LOWER_LETTERS = 1;
+	
+	boolean valid = true;
+	
+	int upperCount = 0;
+	int lowerCount = 0;
+
+	Scanner in = new Scanner(System.in);
+	
+	System.out.println("Enter your password: ");
+	
+	String input = in.nextLine();
+	int inputLen = input.length();
+
+	for(int i=0;i<inputLen;i++) { 
+		char ch = input.charAt(i);
+				if (Character.isUpperCase(ch))
+					upperCount++;
+				else if (Character.isLowerCase(ch))
+					lowerCount++;
+				
+    }
+    String specialChars = "(.*[!].*$)";
+
+    {
+
+
+		if(upperCount >= NUM_UPPER_LETTERS && lowerCount >= NUM_LOWER_LETTERS && input.length()>=7 && input.length()<=12 && input.matches(specialChars))
+			System.out.println("Password valid and accepted");
+		else {
+				System.out.println("Error");
+				
+}
+}
+}
+}
+
+				
+
+
